@@ -18,8 +18,8 @@ def ft_plant_growth():
     initial_size = rose.height
     print("=== Garden Plant Growth ===")
     rose.show()
-    for start in range(7):
-        print(f'=== Day {start + 1} ===')
+    for day in range(7):
+        print(f'=== Day {day + 1} ===')
         rose.grow()
         rose.age()
         rose.show()
