@@ -6,7 +6,7 @@ class Plant:
 
     def show(self):
         print(f'{self._name}: {self._height}cm, {self._age} days old')
-    
+
     def grow(self):
         self._height = round(self._height + 2.1, 1)
 
@@ -15,18 +15,22 @@ class Plant:
 
     def set_height(self, new_height):
         if (new_height < 0):
-            print(f"{self._name}: Error, height can't be negative\nHeight update rejected")
+            print(
+                f"{self._name}: Error, height can't be negative\n"
+                "Height update rejected")
         else:
             self._height = new_height
             print(f'Height updated: {self._height}cm')
-    
+
     def set_age(self, new_age):
         if (new_age < 0):
-             print(f"{self._name}: Error, age can't be negative\nAge update rejected")
+            print(
+                f"{self._name}: Error, age can't be negative\n"
+                "Age update rejected")
         else:
             self._age = new_age
             print(f'Age updated: {self._age} days \n')
-       
+
     def get_height(self):
         return round(self._height + 0.0, 1)
 
@@ -58,7 +62,9 @@ class Tree(Plant):
         self._trunk_diameter = trunk_diameter
 
     def produce_shade(self):
-        print(f"Tree {self._name} now produces a shade of {self._height}cm long and {self._trunk_diameter}cm wide.")
+        print(
+            f"Tree {self._name} now produces a shade of {self._height}cm"
+            f"long and {self._trunk_diameter}cm wide.")
 
     def show(self):
         super().show()
@@ -109,6 +115,7 @@ def ft_plant_types():
         tomato.grow()
         tomato.age()
     tomato.show()
+
 
 if __name__ == "__main__":
     ft_plant_types()

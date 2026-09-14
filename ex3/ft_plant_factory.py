@@ -5,7 +5,11 @@ class Plant:
         self.starting_age = starting_age
 
     def show(self):
-        print(f'Created: {self.name}: {self.starting_height}cm, {self.starting_age} days old')
+        print(
+            f'Created: {self.name}: {self.starting_height}cm, '
+            f'{self.starting_age} days old'
+        )
+
 
 def ft_plant_factory():
     rose = Plant("Rose", 25.0, 30)
@@ -17,6 +21,7 @@ def ft_plant_factory():
     print("=== Plant Factory Output ===")
     for plants in list:
         plants.show()
+
 
 if __name__ == "__main__":
     ft_plant_factory()

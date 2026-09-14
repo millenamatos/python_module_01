@@ -3,15 +3,16 @@ class Plant:
         self.name = name
         self.height = height
         self.days = days
-    
+
     def show(self):
         print(f'{self.name}: {self.height}cm, {self.days} days old')
-    
+
     def grow(self):
         self.height = round(self.height + 0.8, 1)
 
     def age(self):
         self.days = self.days + 1
+
 
 def ft_plant_growth():
     rose = Plant("Rose", 25.0, 30)
@@ -24,6 +25,7 @@ def ft_plant_growth():
         rose.age()
         rose.show()
     print(f'Growth this week: {round(rose.height - initial_size, 1)}cm')
+
 
 if __name__ == "__main__":
     ft_plant_growth()

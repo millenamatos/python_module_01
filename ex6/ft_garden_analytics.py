@@ -8,7 +8,7 @@ class Plant:
     def show(self):
         self._stats._show += 1
         print(f'{self._name}: {self._height}cm, {self._age} days old')
-    
+
     def grow(self):
         self._stats._grow += 1
         self._height = round(self._height + 8.0, 1)
@@ -19,18 +19,22 @@ class Plant:
 
     def set_height(self, new_height):
         if (new_height < 0):
-            print(f"{self._name}: Error, height can't be negative\nHeight update rejected")
+            print(
+                f"{self._name}: Error, height can't be negative\n"
+                "Height update rejected")
         else:
             self._height = new_height
             print(f'Height updated: {self._height}cm')
-    
+
     def set_age(self, new_age):
         if (new_age < 0):
-             print(f"{self._name}: Error, age can't be negative\nAge update rejected")
+            print(
+                f"{self._name}: Error, age can't be negative\n"
+                "Age update rejected")
         else:
             self._age = new_age
             print(f'Age updated: {self._age} days \n')
-       
+
     def get_height(self):
         return self._height
 
@@ -92,17 +96,22 @@ class Tree(Plant):
 
     def produce_shade(self):
         self._stats._shade += 1
-        print(f"Tree {self._name} now produces a shade of {self._height}cm long and {self._trunk_diameter}cm wide.")
+        print(
+            f"Tree {self._name} now produces a shade of {self._height}cm"
+            f"long and {self._trunk_diameter}cm wide.")
 
     def show(self):
         super().show()
         print(f"Trunk diameter: {self._trunk_diameter}cm")
 
+
 def show_stats(plant):
-   print(f'[statistics for {plant._name}]')
-   print(f'Stats: {plant._stats._grow} grow, {plant._stats._age} age, {plant._stats._show} show')
-   if isinstance(plant, Tree):
-    print(f'{plant._stats._shade} shade')
+    print(f'[statistics for {plant._name}]')
+    print(
+        f'Stats: {plant._stats._grow} grow, {plant._stats._age} age,'
+        f'{plant._stats._show} show')
+    if isinstance(plant, Tree):
+        print(f'{plant._stats._shade} shade')
 
 
 # auxiliary functions
@@ -116,12 +125,14 @@ def show_flower(rose):
     rose.show()
     show_stats(rose)
 
+
 def show_tree(oak):
     print("\n=== Tree")
     oak.show()
     show_stats(oak)
     oak.produce_shade()
     show_stats(oak)
+
 
 def show_seed(sunflower):
     print("\n=== Seed")
@@ -145,7 +156,7 @@ def ft_garden_analytics():
     print("=== Check year-old")
     print(f"Is 30 days more than a year? -> {Plant.check_age(30)}")
     print(f"Is 400 days more than a year? -> {Plant.check_age(400)}\n")
-    
+
     show_flower(rose)
     show_tree(oak)
     show_seed(sunflower)
@@ -153,6 +164,7 @@ def ft_garden_analytics():
     print("\n=== Anonymous")
     anonymous.show()
     show_stats(anonymous)
+
 
 if __name__ == "__main__":
     ft_garden_analytics()
