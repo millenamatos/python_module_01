@@ -7,8 +7,7 @@ class Plant:
     def show(self):
         print(
             f'Created: {self.name}: {self.starting_height}cm, '
-            f'{self.starting_age} days old'
-        )
+            f'{self.starting_age} days old')
 
 
 def ft_plant_factory():
@@ -17,10 +16,10 @@ def ft_plant_factory():
     cactus = Plant("Cactus", 5.0, 90)
     sunflower = Plant("Sunflower", 80.0, 45)
     fern = Plant("Fern", 15.0, 120)
-    list = [rose, oak, cactus, sunflower, fern]
+    plants = [rose, oak, cactus, sunflower, fern]
     print("=== Plant Factory Output ===")
-    for plants in list:
-        plants.show()
+    for plant in plants:
+        plant.show()
 
 
 if __name__ == "__main__":

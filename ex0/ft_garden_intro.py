@@ -3,9 +3,9 @@ def ft_garden_intro():
     plant = "Rose"
     height = 25
     age = 30
-    print("Plant:", plant)
+    print(f'Plant: {plant}')
     print(f'Height: {height}cm')
-    print("Age:", age, "days\n")
+    print(f'Age: {age} days\n')
     print("=== End of Program ===")
 
 
